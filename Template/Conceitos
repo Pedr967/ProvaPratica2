@@ -1,0 +1,32 @@
+O Template sujere a criação de uma super classe
+onde os comportamentos dos objetos serão
+divididos em métodos diferentes, ou seja, será
+executado em etapas.
+
+Essas etapas serão colocadas dentro de um único
+método, chamado de método padrão. Essas etapas
+podem ser métodos abstratos para que suas classes
+filhas façam suas implementações ou
+implementações já pré-definidas.
+
+Isso nos permite ter execuções personalizadas
+desse método padrão, já que cada subclasse irá
+implementar as etapas de sua maneira
+
+No entanto, podemos definir métodos abstratos
+onde as subclasses podem ou não implementar. E
+ainda colocar esses métodos em qualquer etapa de
+execução dentro do método padrão. Esse método
+opcional é chamado de hook (gancho).
+
+Usamos quando queremos que o client forneça suas
+implementações de partes do algoritmo
+Também usamos quando temos classes diferentes
+com implementações parecidas. Com o template
+removemos essa duplicidade
+
+Com isso o código repetido será removido das
+subclasses
+
+Observação: O Template Method é um padrão
+baseado apenas em herança
