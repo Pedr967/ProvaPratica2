@@ -1,0 +1,30 @@
+Providencia uma interface para a criação de famílias
+de objetos relacionados sem especificar suas
+classes concretas (O client não tem acesso as
+classes concretas).
+
+Podemos usar o AbsFactory para criação de fábricas
+para cada OS (família).
+
+Cada fábrica ficará responsável por criar os
+elementos corretos para cada OS.
+
+Cria uma camada de abstração a mais para o
+factory Method
+
+O cliente apenas interage com as fábricas. Se
+precisar mudar o OS, apenas chama a outra fábrica.
+
+Se alguma manutenção for necessária nos
+elementos concretos, mudamos nas classes
+concretas dos elementos (descoplamento).
+
+Para o cliente, qualquer fábrica faz a mesma coisa,
+e ele não tem acesso a como esses objetos são
+definidos (classes concretas que definem os
+elementos).
+
+Ou seja, uma vez que chamamos uma fábrica para
+determinada família de objetos, não precisamos
+nos preocupar com a compatibilidade deles.
+Garantimos que serão todos da mesma família.
