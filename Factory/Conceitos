@@ -28,3 +28,20 @@ Ou seja, uma vez que chamamos uma fábrica para
 determinada família de objetos, não precisamos
 nos preocupar com a compatibilidade deles.
 Garantimos que serão todos da mesma família.
+
+
+Resumindo aplicabilidade
+
+*Quando precisamos de famílias de produtos
+(objetos)
+*Separar a criação desses produtos do client
+(desacoplamento)
+*Separar a maneira como cada família contrói seus
+objetos
+
+*Open-closed principle. Aberto e fácil de estender
+para adicionar mais fábricas, sem necessidade de
+mudar o código que já existe
+*Single Responsibility Principle. Separação do código
+que cria e do que usa. Característica dos padrões de
+criação.

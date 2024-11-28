@@ -1,0 +1,64 @@
+Nos dias atuais é bastante comum o conceito de
+observabilidade (não relacionado ao padrão), isto
+é, monitoramento
+
+Aplicamos monitoramento em diferentes aspectos
+das nossas aplicações e infraestrutura
+
+Um exemplo é o Prometheus. Solução para
+monitoramento de aplicações e infra que oferece
+uma plataforma para salvar os dados e geração de
+alertas
+
+Considere que você possua diferentes microserviços
+sendo hospedados em um cluster
+
+Monitorar a saúde desse cluster é importante para
+manter uma alta disponibilidade
+
+MTTR (Tempo médio de recuperação); MTBF (Tempo
+médio entre falhas)
+
+Implementa um mecanismo de assinatura onde
+podemos notificar objetos sobre eventos que
+aconteçam com o objeto observado
+
+Nosso objeto observado é "verificado", ou
+"escutado", a todo momento pelos outros objetos,
+até que um evento de interesse aconteça
+
+O objeto que é observado, também chamado de
+Sujeito, é quem possui o estado de interesse
+
+Aqui, vamos delegar a responsabilidade de
+notificar as suas mudanças de estado para ele
+mesmo
+
+Portanto, vamos chamá-lo de publicador. Os outros
+objetos que possuem interesse nele serão chamados
+de assinantes
+
+O publicador irá implementar um mecanismo de
+assinatura, onde os objetos interessados poderão
+assinar ou desassinar uma corrente de eventos do
+objeto publicador
+
+Para criar esse mecanismo, o publicador irá
+implementar uma lista para armazenar uma
+referência de seus objetos assinantes e outros
+métodos para adicionar e remover esses assinantes
+
+Para garantir que o objeto publicador consiga
+interagir com todos os assinante, criamos uma
+interface ou classe pai onde os assinantes irão
+implementar ou herdar. Dessa maneira podemos
+definir todos os métodos necessários para o objeto
+publicador. Essa interface irá declarar o método de
+notificação.
+
+Alguns frameworks e libs que utilizam
+RxJS (React Extension for Javascript)
+Java Util Observable
+.NET/INotifyPropertyChanged
+Python/Blinket e Django Signals
+Swift/Objective C: KVO (Key Value Observing)
